@@ -1,0 +1,36 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $HK-Grotesk;
+    font-style: $font-style;
+    background-color: $bg-color;
+
+}
+p{
+    margin: 0;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background: transparent;
+
+    &-thumb {
+        background: #888;
+        border-radius: 10px;
+        z-index: 99;
+    }
+
+    &-track {
+        background: transparent;
+    }
+}
+

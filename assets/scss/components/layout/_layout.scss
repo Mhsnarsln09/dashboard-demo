@@ -1,0 +1,115 @@
+.whenTheUserLoggedIn {
+    display: flex;
+    gap: 16px;
+
+    aside {
+        border-right: 2px solid #E6E8EB;
+        padding: 24px;
+        width: 100px;
+
+        .aside-bar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 35px;
+
+            .logo {
+                cursor: pointer;
+            }
+
+            .link {
+                @extend %flex-center;
+                cursor: pointer;
+            }
+
+            .active-tab {
+                background: rgba(120, 182, 255, 0.2);
+                border-radius: 16px;
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+
+    main {
+        padding: 24px 0;
+        width: 100%;
+
+        .main-header {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            color: rgba(0, 0, 0, 1);
+            .notification {
+                background: rgba(120, 182, 255, 0.3);
+                width: 811px;
+                border-radius: 5px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 12px 24px;
+
+                p {
+                    font-family: $HK-Grotesk;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 16.8px;
+                    text-align: left;
+
+                    span {
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+
+                }
+
+                .close {
+                    height: 24px;
+                    width: 24px;
+                    cursor: pointer;
+                }
+            }
+
+            .title {
+                width: 811px;
+                height: 80px;
+                font-family: $HK-Grotesk;
+                font-size: 30px;
+                font-weight: 700;
+                line-height: 36.01px;
+                text-align: left;
+                display: flex;
+                align-items: center;
+
+            }
+
+            .tab {
+                width: 811px;
+                display: flex;
+                gap: 24px;
+                color: rgba(0, 0, 0, 1);
+                font-family: $HK-Grotesk;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 24px;
+                text-align: left;
+                &-link {
+                    cursor: pointer;
+                    height: 40px;
+                }
+            }
+            .active-tab-link{
+                border-bottom: 3px solid #0C6DFC;
+                color: #0C6DFC;
+            }
+            .divider-root{
+                margin: -32px 0 16px 0;
+                padding: 0;
+                z-index: -1;
+            }
+        }
+    }
+
+}

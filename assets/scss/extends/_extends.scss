@@ -1,0 +1,31 @@
+%responsive-screen {
+    transition: scale 0.3s ease;
+    @include largeDesktopView {
+        width: 100%;
+        max-width: $large-desktop;
+        margin: 0 auto;
+    }
+
+    @include desktopView {
+        width: 100%;
+        max-width: $desktop;
+        margin: 0 auto;
+    }
+
+    @include mobileView {
+        width: 100%;
+        max-width: $mobile;
+        margin: 0 auto;
+    }
+}
+
+
+%flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%min-height-100vh {
+    min-height: calc(100vh - 48px);
+}

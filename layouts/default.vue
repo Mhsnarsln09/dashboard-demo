@@ -71,7 +71,7 @@ const isUserHasToken = computed(() => {
 onMounted(() => {
     if (authStore.token.length && route.path === '/login') {
         router.push('/');
-    } else if (!authStore.token.length && route.path !== '/') {
+    } else if (!authStore.token.length && route.path == '/') {
         router.push('/login');
     }
     activeTab(dashboardStore.tab);

@@ -62,6 +62,16 @@
             font-size: 16px;
             line-height: 20px;
         }
+
+        &-content {
+            height: 100%;
+            .custom-chart{
+                canvas{
+                    height: 400px;
+                    
+                }
+            }
+        }
     }
 
     .table {

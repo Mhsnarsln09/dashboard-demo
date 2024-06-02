@@ -27,7 +27,7 @@
             </aside>
             <main>
                 <div class="main-header">
-                    <div class="notification">
+                    <div class="notification" v-if="isShowNotification">
                         <p>Special Offer! Get Complete Free Proxy 10 MB Proxy, without credit card. <span>Start Free
                                 Trial</span></p>
                         <div class="close">
@@ -68,6 +68,12 @@ const isUserHasToken = computed(() => {
     return authStore.token.length;
 });
 
+const isShowNotification = ref(true);
+
+watch(isUserHasToken, () => {
+        isShowNotification.value = true;
+});
+
 onMounted(() => {
     if (authStore.token.length && route.path === '/login') {
         router.push('/');
@@ -102,8 +108,7 @@ const activeTab = (tabId: number) => {
 
 
 const closeNotification = () => {
-    const notification = document.querySelector('.notification') as HTMLElement;
-    notification.style.display = 'none';
+    isShowNotification.value = false;
 }
 
 const logout = () => {
